@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingBottom="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_activities"
+        tools:context=".activities.CodigoVerificacionEmailActivity">
+
+        <!-- Titulo -->
+
+        <!-- Mensaje de envío de código -->
+        <TextView
+            android:id="@+id/textView_titulo_verificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:text="Verificación de E-mail"
+            android:textColor="@color/color_texto_titulo"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_envio_codigo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="40dp"
+            android:gravity="center"
+            android:text="Envíamos un código a:\ncorreo@ejemplo.com"
+            android:textColor="@color/color_texto_informativo"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_titulo_verificacion" />
+
+        <!-- Campo de entrada de código -->
+        <EditText
+            android:id="@+id/editText_codigo_verificacion"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/redondeado"
+            android:gravity="center"
+            android:hint="Ingrese código e-mail"
+            android:inputType="number"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="@color/color_texto_entradas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_envio_codigo" />
+
+        <!-- Botón de verificar E-mail -->
+        <Button
+            android:id="@+id/button_verificar_email"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="@color/color_fondo_botones"
+            android:text="Verificar E-mail"
+            android:textColor="@color/color_texto_botones"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_codigo_verificacion" />
+
+        <!-- Texto "Inicia Sesión" PEGADO al botón -->
+        <TextView
+            android:id="@+id/textView_ya_tienes_cuenta_verificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="¿tienes cuenta? Inicia Sesión"
+            android:textColor="@color/color_texto_enlaces"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_verificar_email" />
+
+        <!-- Icono de validación para código (PEQUEÑO) -->
+        <ImageView
+            android:id="@+id/icono_validacion_codigo"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginEnd="20dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/editText_codigo_verificacion"
+            app:layout_constraintEnd_toEndOf="@+id/editText_codigo_verificacion"
+            app:layout_constraintTop_toTopOf="@+id/editText_codigo_verificacion"
+            app:srcCompat="@drawable/icono_asterisk" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingBottom="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_activities"
+        tools:context=".activities.RegistroActivity">
+
+        <TextView
+            android:id="@+id/textView_titulo_registro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Registrarse"
+            android:textColor="@color/text_color_black"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Campo Nombres MEJORADO -->
+
+        <EditText
+            android:id="@+id/editText_nombres_registro"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/redondeado"
+            android:ellipsize="end"
+            android:hint="Nombres"
+            android:inputType="textCapWords|textNoSuggestions"
+            android:maxLines="1"
+            android:paddingStart="25dp"
+            android:paddingEnd="45dp"
+            android:textColorHint="@color/color_texto_entradas"
+            android:textColor="@color/color_texto_ingreso"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_subtitulo_registro" />
+
+        <ImageView
+            android:id="@+id/icono_validacion_nombres"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginEnd="20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/editText_nombres_registro"
+            app:layout_constraintEnd_toEndOf="@+id/editText_nombres_registro"
+            app:layout_constraintTop_toTopOf="@+id/editText_nombres_registro"
+            app:srcCompat="@drawable/icono_asterisk" />
+
+        <!-- Mensaje azul para nombres -->
+        <TextView
+            android:id="@+id/textView_mensaje_nombres"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="40dp"
+            android:text="Solo letras, no puede empezar con espacios"
+            android:textColor="@color/text_color_olvidocontraseña_Bienvenida"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_nombres_registro" />
+
+        <!-- Campo Apellidos MEJORADO -->
+        <EditText
+            android:id="@+id/editText_apellidos_registro"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="20dp"
+            android:hint="Apellidos"
+            android:textColorHint="@color/color_texto_entradas"
+            android:textColor="@color/color_texto_ingreso"
+            android:inputType="textCapWords|textNoSuggestions"
+            android:background="@drawable/redondeado"
+            android:paddingStart="25dp"
+            android:paddingEnd="45dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_nombres" />
+
+        <ImageView
+            android:id="@+id/icono_validacion_apellidos"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginEnd="20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/editText_apellidos_registro"
+            app:layout_constraintEnd_toEndOf="@+id/editText_apellidos_registro"
+            app:layout_constraintTop_toTopOf="@+id/editText_apellidos_registro"
+            app:srcCompat="@drawable/icono_asterisk" />
+
+        <!-- Mensaje azul para apellidos -->
+        <TextView
+            android:id="@+id/textView_mensaje_apellidos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="40dp"
+            android:text="Solo letras, no puede empezar con espacios"
+            android:textColor="@color/text_color_olvidocontraseña_Bienvenida"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_apellidos_registro" />
+
+        <!-- Campo Cédula MEJORADO -->
+        <EditText
+            android:id="@+id/editText_cedula_registro"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="20dp"
+            android:hint="Número de cédula"
+            android:textColorHint="@color/color_texto_entradas"
+            android:textColor="@color/color_texto_ingreso"
+            android:inputType="number"
+            android:background="@drawable/redondeado"
+            android:paddingStart="25dp"
+            android:paddingEnd="45dp"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_apellidos" />
+
+        <ImageView
+            android:id="@+id/icono_validacion_cedula"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginEnd="20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/editText_cedula_registro"
+            app:layout_constraintEnd_toEndOf="@+id/editText_cedula_registro"
+            app:layout_constraintTop_toTopOf="@+id/editText_cedula_registro"
+            app:srcCompat="@drawable/icono_asterisk" />
+
+        <!-- Mensaje azul para cédula -->
+        <TextView
+            android:id="@+id/textView_mensaje_cedula"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="40dp"
+            android:text="Formato: 7 a 10 dígitos numéricos"
+            android:textColor="@color/text_color_olvidocontraseña_Bienvenida"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_cedula_registro" />
+
+        <!-- Campo Email MEJORADO -->
+        <EditText
+            android:id="@+id/editText_email_registro"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="20dp"
+            android:hint="E-mail"
+            android:textColorHint="@color/color_texto_entradas"
+            android:textColor="@color/color_texto_ingreso"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/redondeado"
+            android:paddingStart="25dp"
+            android:paddingEnd="45dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:imeOptions="actionNext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_cedula" />
+
+        <ImageView
+            android:id="@+id/icono_validacion_email"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginEnd="20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/editText_email_registro"
+            app:layout_constraintEnd_toEndOf="@+id/editText_email_registro"
+            app:layout_constraintTop_toTopOf="@+id/editText_email_registro"
+            app:srcCompat="@drawable/icono_asterisk" />
+
+        <!-- Mensaje azul para email -->
+        <TextView
+            android:id="@+id/textView_mensaje_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="40dp"
+            android:text="Dominios: gmail.com, outlook.com, hotmail.com, ucompensar.edu.co"
+            android:textColor="@color/text_color_olvidocontraseña_Bienvenida"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_email_registro" />
+
+        <!-- Campo Teléfono MEJORADO -->
+        <EditText
+            android:id="@+id/editText_telefono_registro"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="20dp"
+            android:hint="Teléfono celular"
+            android:textColorHint="@color/color_texto_entradas"
+            android:textColor="@color/color_texto_ingreso"
+            android:inputType="number"
+            android:background="@drawable/redondeado"
+            android:paddingStart="25dp"
+            android:paddingEnd="45dp"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_email" />
+
+        <ImageView
+            android:id="@+id/icono_validacion_telefono"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginEnd="20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/editText_telefono_registro"
+            app:layout_constraintEnd_toEndOf="@+id/editText_telefono_registro"
+            app:layout_constraintTop_toTopOf="@+id/editText_telefono_registro"
+            app:srcCompat="@drawable/icono_asterisk" />
+
+        <!-- Mensaje azul para teléfono -->
+        <TextView
+            android:id="@+id/textView_mensaje_telefono"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="40dp"
+            android:text="Formato: 10 dígitos, solo números"
+            android:textColor="@color/text_color_olvidocontraseña_Bienvenida"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_telefono_registro" />
+
+        <Button
+            android:id="@+id/button_continuar_egistro"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="@color/color_fondo_botones"
+            android:text="Continuar"
+            android:textColor="@color/color_texto_botones"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_telefono" />
+
+        <TextView
+            android:id="@+id/textView_ya_tienes_cuenta_registro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="40dp"
+            android:text="¿Ya tienes cuenta? Inicia Sesión"
+            android:textColor="@color/text_color_olvidocontraseña_Bienvenida"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_continuar_egistro" />
+
+        <TextView
+            android:id="@+id/textView_subtitulo_registro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="15dp"
+            android:text="Complete los siguientes datos:"
+            android:textColor="@color/text_color_black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_titulo_registro" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

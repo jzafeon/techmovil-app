@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_activities"
+    tools:context=".activities.CrearContrasenaRegistroActivity">
+
+
+    <TextView
+        android:id="@+id/textView_titulo_completar_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Complete su registro"
+        android:textColor="@color/text_color_black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView_requisitos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="60dp"
+        android:text="Ingrese una contraseña que\ncumpla con los siguientes\nrequisitos de seguridad:"
+        android:textColor="@color/color_texto_informativo"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_titulo_completar_registro" />
+
+    <TextView
+        android:id="@+id/textView_lista_requisitos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="60dp"
+        android:fontFamily="sans-serif"
+        android:text="Al menos 8 caracteres\nUna letra mayúscula (A-Z)\nUna letra minúscula (a-z)\nUn número (G-S)\nUn carácter especial (porejemplo: *, i, #, $, %)"
+        android:textColor="@color/color_texto_informativo"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_requisitos" />
+
+    <EditText
+        android:id="@+id/editText_crear_contrasena"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/redondeado"
+        android:hint="Crear contraseña"
+        android:textColorHint="@color/color_texto_entradas"
+        android:inputType="textPassword"
+        android:autofillHints="sans-serif"
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_lista_requisitos" />
+
+
+    <EditText
+        android:id="@+id/editText_confirmar_contrasena"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/redondeado"
+        android:hint="Confirmar contraseña"
+        android:textColorHint="@color/color_texto_entradas"
+        android:inputType="textPassword"
+        android:autofillHints="sans-serif"
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_crear_contrasena" />
+
+
+    <Button
+        android:id="@+id/button_finalizar_registro"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="@color/color_fondo_botones"
+        android:text="Finalizar registro"
+        android:textColor="@color/color_texto_botones"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_confirmar_contrasena" />
+
+
+    <TextView
+        android:id="@+id/textView_ya_tienes_cuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="¿ya tienes cuenta? Inicia Sesión"
+        android:textColor="@color/text_color_olvidocontraseña_Bienvenida"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_finalizar_registro" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

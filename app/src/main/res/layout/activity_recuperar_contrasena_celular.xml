@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_activities"
+    tools:context=".activities.RecuperarContrasenaCelularActivity">
+
+    <!-- Título principal -->
+    <TextView
+        android:id="@+id/textView_titulo_recuperar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Recuperar contraseña"
+        android:textColor="@color/text_color_black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Texto informativo -->
+    <TextView
+        android:id="@+id/textView_info_recuperar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="60dp"
+        android:gravity="center"
+        android:text="Ingrese su número de celular registrado para restablecer su contraseña."
+        android:textColor="@color/text_color_black"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_titulo_recuperar" />
+
+    <!-- Texto "Número de celular" -->
+    <TextView
+        android:id="@+id/textView_numero_celular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="40dp"
+        android:text="Número de celular"
+        android:textColor="@color/text_color_black"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_info_recuperar" />
+
+    <!-- Campo de número de celular -->
+    <EditText
+        android:id="@+id/editText_numero_celular"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/redondeado"
+        android:hint="Número de celular"
+        android:textColorHint="@color/color_texto_entradas"
+        android:inputType="phone"
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_numero_celular" />
+
+    <!-- Botón Enviar código -->
+    <Button
+        android:id="@+id/button_enviar_codigo"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="@color/color_fondo_botones"
+        android:text="Enviar código"
+        android:textColor="@color/color_texto_botones"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_numero_celular" />
+
+    <!-- Texto de pregunta -->
+    <TextView
+        android:id="@+id/textView_pregunta_acceso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="60dp"
+        android:gravity="center"
+        android:text="¿Ha tiene acceso al correo ir al celular?"
+        android:textColor="@color/text_color_black"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_enviar_codigo" />
+
+    <!-- Enlace "Contestar soporte técnico" -->
+    <TextView
+        android:id="@+id/textView_soporte_tecnico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Contestar soporte técnico"
+        android:textColor="@color/text_color_olvidocontraseña_Bienvenida"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_pregunta_acceso" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

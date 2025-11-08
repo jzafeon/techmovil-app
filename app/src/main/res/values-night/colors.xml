@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_splash">#09528E</color>
+    <color name="background_activities">#F5F9FD</color>
+    <color name="text_color_black">#2F2F2F</color>
+    <color name="text_color_View_Mensaje_Bienvenida">#8796AC</color>
+    <color name="text_color_olvidocontraseña_Bienvenida">#09528E</color>
+    <color name="color_fondo_entrada_text_registro">#C8D7EB</color>
+    <color name="color_texto_entradas">#8796AC</color>
+    <color name="color_texto_enlaces">#09528E</color>
+    <color name="color_texto_informativo">#8796AC</color>
+    <color name="color_texto_titulo">#2F2F2F</color>
+    <color name="color_texto_ingreso">#2F2F2F</color>
+</resources>

@@ -156,7 +156,6 @@ class IniciarSesionActivity : AppCompatActivity() {
             }
         )
     }
-
     private fun mostrarAsteriscosIniciales() {
         iconoValidacionCorreo.apply {
             setImageResource(R.drawable.icono_asterisk)
@@ -171,7 +170,6 @@ class IniciarSesionActivity : AppCompatActivity() {
             visibility = ImageView.GONE
         }
     }
-
     private fun setupValidations() {
         // Validación en tiempo real para el correo
         editTextCorreo.addTextChangedListener(object : TextWatcher {
@@ -224,7 +222,6 @@ class IniciarSesionActivity : AppCompatActivity() {
 
         actualizarBotonIngresar()
     }
-
     private fun validarCorreo(texto: String) {
         val error = when {
             texto.isEmpty() -> null
@@ -234,7 +231,6 @@ class IniciarSesionActivity : AppCompatActivity() {
             !validarEmailEstricto(texto) -> "Dominio no permitido - Use: gmail.com, outlook.com, hotmail.com, ucompensar.edu.co"
             else -> null
         }
-
         if (error != null) {
             actualizarEstadoCorreo(false)
             textViewMensajeCorreo.text = error
@@ -244,7 +240,6 @@ class IniciarSesionActivity : AppCompatActivity() {
             textViewMensajeCorreo.visibility = TextView.GONE
         }
     }
-
     private fun validarContrasena(contrasena: String) {
         val error = when {
             contrasena.isEmpty() -> null
@@ -256,7 +251,6 @@ class IniciarSesionActivity : AppCompatActivity() {
             !contrasena.matches(Regex(".*[!@#\$%^&*(),.?\":{}|<>].*")) -> "Debe contener al menos un carácter especial (!@#\$%^&* etc.)"
             else -> null
         }
-
         if (error != null) {
             actualizarEstadoContrasena(false)
             textViewMensajeContrasena.text = error
@@ -266,31 +260,26 @@ class IniciarSesionActivity : AppCompatActivity() {
             textViewMensajeContrasena.visibility = TextView.GONE
         }
     }
-
     private fun actualizarEstadoCorreo(esValido: Boolean) {
         val texto = editTextCorreo.text.toString()
         iconoValidacionCorreo.setImageResource(if (esValido) R.drawable.icono_check else R.drawable.icono_asterisk)
         iconoValidacionCorreo.visibility = if (texto.isEmpty() || esValido) ImageView.VISIBLE else ImageView.INVISIBLE
     }
-
     private fun actualizarEstadoContrasena(esValido: Boolean) {
         val texto = editTextContrasena.text.toString()
         iconoValidacionContrasena.setImageResource(if (esValido) R.drawable.icono_check else R.drawable.icono_asterisk)
         iconoValidacionContrasena.visibility = if (texto.isEmpty() || esValido) ImageView.VISIBLE else ImageView.INVISIBLE
     }
-
     private fun validarEmailEstricto(email: String): Boolean {
         return email.count { it == '@' } == 1 &&
                 android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches() &&
                 email.substringAfterLast('@').lowercase() in dominiosPermitidos
     }
-
     private fun validarFormularioCompleto(): Boolean {
         val correoValido = validarEmailEstricto(editTextCorreo.text.toString().replace(" ", ""))
         val contrasenaValida = validarContrasenaSilenciosa(editTextContrasena.text.toString())
         return correoValido && contrasenaValida
     }
-
     private fun validarContrasenaSilenciosa(contrasena: String): Boolean {
         return contrasena.isNotEmpty() &&
                 contrasena.length >= 8 &&
@@ -300,7 +289,6 @@ class IniciarSesionActivity : AppCompatActivity() {
                 contrasena.matches(Regex(".*[0-9].*")) &&
                 contrasena.matches(Regex(".*[!@#\$%^&*(),.?\":{}|<>].*"))
     }
-
     private fun actualizarBotonIngresar() {
         val formularioValido = validarFormularioCompleto()
         buttonIngresar.isEnabled = formularioValido

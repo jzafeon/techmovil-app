@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TechMovil">
         <activity
+            android:name=".activities.RecuperarContrasenaActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.RecuperarContrasenaCelularActivity"
             android:exported="false" />
         <activity

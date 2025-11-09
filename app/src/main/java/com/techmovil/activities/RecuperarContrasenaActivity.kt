@@ -7,10 +7,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.techmovil.R
 
-class RecuperarContrasenaCelularActivity : AppCompatActivity() {
+class RecuperarContrasenaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_recuperar_contrasena_celular)
+        setContentView(R.layout.activity_recuperar_contrasena)
+
     }
 }

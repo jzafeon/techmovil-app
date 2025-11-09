@@ -15,9 +15,6 @@
             android:name=".activities.RecuperarContrasenaActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.RecuperarContrasenaCelularActivity"
-            android:exported="false" />
-        <activity
             android:name=".activities.RegistroCompletadoActivity"
             android:exported="false" />
         <activity

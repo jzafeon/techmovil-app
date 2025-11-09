@@ -10,7 +10,7 @@
 
 
     <TextView
-        android:id="@+id/textView_titulo_completar_registro"
+        android:id="@+id/textView_titulo_crear_contraeña_registro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -25,7 +25,7 @@
 
 
     <TextView
-        android:id="@+id/textView_requisitos"
+        android:id="@+id/textView_mensaje_informativo_crear_contraseña_registro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -38,26 +38,26 @@
         android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_titulo_completar_registro" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_titulo_crear_contraeña_registro" />
 
     <TextView
-        android:id="@+id/textView_lista_requisitos"
+        android:id="@+id/textView_mensaje2_informativo_crear_contraseña_registro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="60dp"
         android:fontFamily="sans-serif"
-        android:text="Al menos 8 caracteres\nUna letra mayúscula (A-Z)\nUna letra minúscula (a-z)\nUn número (G-S)\nUn carácter especial (porejemplo: *, i, #, $, %)"
+        android:text="Al menos 8 caracteres: \n\n Una letra mayúscula (A-Z)\n Una letra minúscula (a-z)\n Un número (G-S)\n Un carácter especial (porejemplo: *, i, #, $, %)"
         android:textColor="@color/color_texto_informativo"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_requisitos" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_informativo_crear_contraseña_registro" />
 
     <EditText
-        android:id="@+id/editText_crear_contrasena"
+        android:id="@+id/editText_entrada_crear_contrasena_registro"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="60dp"
@@ -71,11 +71,11 @@
         android:paddingStart="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_lista_requisitos" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_mensaje2_informativo_crear_contraseña_registro" />
 
 
     <EditText
-        android:id="@+id/editText_confirmar_contrasena"
+        android:id="@+id/editText_entrada_confirmar_contrasena_registro"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="60dp"
@@ -89,11 +89,11 @@
         android:paddingStart="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_crear_contrasena" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_entrada_crear_contrasena_registro" />
 
 
     <Button
-        android:id="@+id/button_finalizar_registro"
+        android:id="@+id/button_finalizar_registro_crear_contraseña_registro"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="60dp"
@@ -107,20 +107,20 @@
         android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_confirmar_contrasena" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_entrada_confirmar_contrasena_registro" />
 
 
     <TextView
-        android:id="@+id/textView_ya_tienes_cuenta"
+        android:id="@+id/textView_enlace_iniciar_sesion_crear_contrasena_registro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="¿ya tienes cuenta? Inicia Sesión"
-        android:textColor="@color/text_color_olvidocontraseña_Bienvenida"
+        android:textColor="@color/color_texto_enlaces"
         android:textSize="16sp"
         android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_finalizar_registro" />
+        app:layout_constraintTop_toBottomOf="@+id/button_finalizar_registro_crear_contraseña_registro" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

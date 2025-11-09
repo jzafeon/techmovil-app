@@ -15,7 +15,7 @@ class EmailVerificadoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_email_verificado)
 
         // Redireccionamiento a CodigoVerificacionCelularActivity
-        val buttonContinuar = findViewById<android.widget.Button>(R.id.button_continuar_verificado)
+        val buttonContinuar = findViewById<android.widget.Button>(R.id.button_continuar_email_verificado)
         buttonContinuar.setOnClickListener {
             val intent = Intent(this, CodigoVerificacionCelularActivity::class.java)
             startActivity(intent)

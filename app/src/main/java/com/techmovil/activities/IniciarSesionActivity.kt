@@ -73,11 +73,11 @@ class IniciarSesionActivity : AppCompatActivity() {
         editTextContrasena = findViewById(R.id.editText_contrasena_iniciar_sesion)
         buttonIngresar = findViewById(R.id.button_ingresar_iniciar_sesion)
 
-        iconoValidacionCorreo = findViewById(R.id.icono_validacion_correo)
-        iconoValidacionContrasena = findViewById(R.id.icono_validacion_contrasena)
-        iconoOjoContrasena = findViewById(R.id.icono_ojo_contrasena)
-        textViewMensajeCorreo = findViewById(R.id.textView_mensaje_correo)
-        textViewMensajeContrasena = findViewById(R.id.textView_mensaje_contrasena)
+        iconoValidacionCorreo = findViewById(R.id.icono_validacion_correo_iniciar_sesion)
+        iconoValidacionContrasena = findViewById(R.id.icono_validacion_contrasena_iniciar_sesion)
+        iconoOjoContrasena = findViewById(R.id.icono_ojo_contrasena_iniciar_sesion)
+        textViewMensajeCorreo = findViewById(R.id.textView_mensaje_correo_iniciar_sesion)
+        textViewMensajeContrasena = findViewById(R.id.textView_mensaje_contrasena_iniciar_sesion)
 
         // Mostrar asteriscos iniciales
         mostrarAsteriscosIniciales()

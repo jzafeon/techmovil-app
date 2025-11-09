@@ -27,7 +27,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Campo Nombres MEJORADO -->
+
 
         <EditText
             android:id="@+id/editText_nombres_registro"
@@ -47,7 +47,7 @@
             android:textColor="@color/color_texto_ingreso"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_subtitulo_registro" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_informativo_registro" />
 
         <ImageView
             android:id="@+id/icono_validacion_nombres"
@@ -60,7 +60,7 @@
             app:layout_constraintTop_toTopOf="@+id/editText_nombres_registro"
             app:srcCompat="@drawable/icono_asterisk" />
 
-        <!-- Mensaje azul para nombres -->
+
         <TextView
             android:id="@+id/textView_mensaje_nombres"
             android:layout_width="0dp"
@@ -76,7 +76,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_nombres_registro" />
 
-        <!-- Campo Apellidos MEJORADO -->
+
         <EditText
             android:id="@+id/editText_apellidos_registro"
             android:layout_width="0dp"
@@ -108,7 +108,7 @@
             app:layout_constraintTop_toTopOf="@+id/editText_apellidos_registro"
             app:srcCompat="@drawable/icono_asterisk" />
 
-        <!-- Mensaje azul para apellidos -->
+
         <TextView
             android:id="@+id/textView_mensaje_apellidos"
             android:layout_width="0dp"
@@ -124,7 +124,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_apellidos_registro" />
 
-        <!-- Campo Cédula MEJORADO -->
+
         <EditText
             android:id="@+id/editText_cedula_registro"
             android:layout_width="0dp"
@@ -155,7 +155,7 @@
             app:layout_constraintTop_toTopOf="@+id/editText_cedula_registro"
             app:srcCompat="@drawable/icono_asterisk" />
 
-        <!-- Mensaje azul para cédula -->
+
         <TextView
             android:id="@+id/textView_mensaje_cedula"
             android:layout_width="0dp"
@@ -171,7 +171,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_cedula_registro" />
 
-        <!-- Campo Email MEJORADO -->
+
         <EditText
             android:id="@+id/editText_email_registro"
             android:layout_width="0dp"
@@ -204,7 +204,7 @@
             app:layout_constraintTop_toTopOf="@+id/editText_email_registro"
             app:srcCompat="@drawable/icono_asterisk" />
 
-        <!-- Mensaje azul para email -->
+
         <TextView
             android:id="@+id/textView_mensaje_email"
             android:layout_width="0dp"
@@ -220,7 +220,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_email_registro" />
 
-        <!-- Campo Teléfono MEJORADO -->
+
         <EditText
             android:id="@+id/editText_telefono_registro"
             android:layout_width="0dp"
@@ -251,7 +251,7 @@
             app:layout_constraintTop_toTopOf="@+id/editText_telefono_registro"
             app:srcCompat="@drawable/icono_asterisk" />
 
-        <!-- Mensaje azul para teléfono -->
+
         <TextView
             android:id="@+id/textView_mensaje_telefono"
             android:layout_width="0dp"
@@ -268,7 +268,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editText_telefono_registro" />
 
         <Button
-            android:id="@+id/button_continuar_egistro"
+            android:id="@+id/button_continuar_registro"
             android:layout_width="0dp"
             android:layout_height="52dp"
             android:layout_marginStart="40dp"
@@ -284,7 +284,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_telefono" />
 
         <TextView
-            android:id="@+id/textView_ya_tienes_cuenta_registro"
+            android:id="@+id/textView_iniciar_sesion_registro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -295,10 +295,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_continuar_egistro" />
+            app:layout_constraintTop_toBottomOf="@+id/button_continuar_registro" />
 
         <TextView
-            android:id="@+id/textView_subtitulo_registro"
+            android:id="@+id/textView_mensaje_informativo_registro"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"

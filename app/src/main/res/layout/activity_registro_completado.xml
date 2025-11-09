@@ -8,9 +8,9 @@
     android:background="@color/background_activities"
     tools:context=".activities.RegistroCompletadoActivity">
 
-    <!-- Icono de check de éxito -->
+
     <ImageView
-        android:id="@+id/imageView_check_exito"
+        android:id="@+id/imageView_check_exito_registro_completado"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="120dp"
@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Título "iRegistro completado!" -->
+
     <TextView
         android:id="@+id/textView_titulo_registro_completado"
         android:layout_width="wrap_content"
@@ -32,28 +32,28 @@
         android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_check_exito" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_check_exito_registro_completado" />
 
-    <!-- Mensaje de bienvenida -->
+
     <TextView
-        android:id="@+id/textView_mensaje_bienvenida"
+        android:id="@+id/textView_mensaje_informativo_registro_completado"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="60dp"
+        android:fontFamily="sans-serif"
         android:gravity="center"
         android:text="Su cuenta ha sido creada\nextrosamente. Bienvenido a\nTechMovil"
         android:textColor="@color/text_color_black"
         android:textSize="16sp"
-        android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_titulo_registro_completado" />
 
-    <!-- Botón Continuar -->
     <Button
-        android:id="@+id/button_continuar_registro"
+        android:id="@+id/button_continuar_registro_completado"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="60dp"
@@ -67,6 +67,6 @@
         android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_bienvenida" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_informativo_registro_completado" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

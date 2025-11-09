@@ -8,9 +8,9 @@
     android:background="@color/background_activities"
     tools:context=".activities.CelularVerificadoActivity">
 
-    <!-- Icono de check de éxito -->
+
     <ImageView
-        android:id="@+id/imageView_check_exito"
+        android:id="@+id/imageView_check_exito_celular_verificado"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="120dp"
@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Título "iCelular verificado!" -->
+
     <TextView
         android:id="@+id/textView_titulo_celular_verificado"
         android:layout_width="wrap_content"
@@ -32,11 +32,11 @@
         android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_check_exito" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_check_exito_celular_verificado" />
 
-    <!-- Mensaje de confirmación -->
+
     <TextView
-        android:id="@+id/textView_mensaje_celular_verificado"
+        android:id="@+id/textView_mensaje_informativo_celular_verificado"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -51,9 +51,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_titulo_celular_verificado" />
 
-    <!-- Botón Continuar -->
+
     <Button
-        android:id="@+id/button_continuar_celular"
+        android:id="@+id/button_continuar_celular_verificado"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="60dp"
@@ -67,11 +67,11 @@
         android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_celular_verificado" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_informativo_celular_verificado" />
 
-    <!-- Enlace "¿Al Hienes obtenir? Media Beada" -->
+
     <TextView
-        android:id="@+id/textView_enlace_celular"
+        android:id="@+id/textView_enlace_celular_verificado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -81,6 +81,6 @@
         android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_continuar_celular" />
+        app:layout_constraintTop_toBottomOf="@+id/button_continuar_celular_verificado" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

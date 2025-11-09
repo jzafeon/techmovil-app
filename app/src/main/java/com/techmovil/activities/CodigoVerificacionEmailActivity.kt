@@ -35,7 +35,7 @@ class CodigoVerificacionEmailActivity : AppCompatActivity() {
         setupValidations()
 
         // Redireccionamiento a IniciarSesionActivity
-        val textViewIniciarSesion = findViewById<TextView>(R.id.textView_ya_tienes_cuenta_verificacion)
+        val textViewIniciarSesion = findViewById<TextView>(R.id.textView_enlace_iniciarsesion_verificacion_email)
         textViewIniciarSesion.setOnClickListener {
             val intent = Intent(this, IniciarSesionActivity::class.java)
             startActivity(intent)
@@ -44,9 +44,9 @@ class CodigoVerificacionEmailActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
-        editTextCodigo = findViewById(R.id.editText_codigo_verificacion)
+        editTextCodigo = findViewById(R.id.editText_entrada_codigo_verificacion_email)
         iconoValidacionCodigo = findViewById(R.id.icono_validacion_codigo)
-        buttonVerificarEmail = findViewById(R.id.button_verificar_email)
+        buttonVerificarEmail = findViewById(R.id.button_verificar_verificacion_email)
 
         // Mostrar asterisco inicial
         mostrarAsteriscoInicial()

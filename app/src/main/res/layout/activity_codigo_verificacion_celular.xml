@@ -8,14 +8,14 @@
     android:background="@color/background_activities"
     tools:context=".activities.CodigoVerificacionCelularActivity">
 
-    <!-- Título principal -->
+
     <TextView
         android:id="@+id/textView_titulo_verificacion_celular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
         android:text="Verificar de Celular"
-        android:textColor="@color/text_color_black"
+        android:textColor="@color/color_texto_titulo"
         android:textSize="24sp"
         android:textStyle="bold"
         android:fontFamily="sans-serif"
@@ -23,9 +23,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Texto "Envíamos un SMS sr." -->
+
     <TextView
-        android:id="@+id/textView_envio_sms"
+        android:id="@+id/textView_mensaje_informativo_verificacion_celular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -37,9 +37,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_titulo_verificacion_celular" />
 
-    <!-- Número de teléfono -->
+
     <TextView
-        android:id="@+id/textView_numero_telefono"
+        android:id="@+id/textView_mensaje2_informativo_verificacion_celular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -50,11 +50,11 @@
         android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_envio_sms" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_informativo_verificacion_celular" />
 
-    <!-- Campo de código de verificación -->
+
     <EditText
-        android:id="@+id/editText_codigo_celular"
+        android:id="@+id/editText_entrada_codigo_verificacion_celular"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="60dp"
@@ -69,9 +69,9 @@
         android:paddingStart="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_numero_telefono" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_mensaje2_informativo_verificacion_celular" />
 
-    <!-- Botón Verificar celular -->
+
     <Button
         android:id="@+id/button_verificar_celular"
         android:layout_width="0dp"
@@ -88,7 +88,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_codigo_celular"
+        app:layout_constraintTop_toBottomOf="@+id/editText_entrada_codigo_verificacion_celular"
         app:layout_constraintVertical_bias="0.088" />
 
 

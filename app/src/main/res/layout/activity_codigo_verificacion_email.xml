@@ -14,11 +14,9 @@
         android:background="@color/background_activities"
         tools:context=".activities.CodigoVerificacionEmailActivity">
 
-        <!-- Titulo -->
 
-        <!-- Mensaje de envío de código -->
         <TextView
-            android:id="@+id/textView_titulo_verificacion"
+            android:id="@+id/textView_titulo_verificacion_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="140dp"
@@ -31,7 +29,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView_envio_codigo"
+            android:id="@+id/textView_mensaje_informativo_verificacion_email"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -43,11 +41,11 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_titulo_verificacion" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_titulo_verificacion_email" />
 
-        <!-- Campo de entrada de código -->
+
         <EditText
-            android:id="@+id/editText_codigo_verificacion"
+            android:id="@+id/editText_entrada_codigo_verificacion_email"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="40dp"
@@ -62,11 +60,11 @@
             android:textColorHint="@color/color_texto_entradas"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_envio_codigo" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_informativo_verificacion_email" />
 
-        <!-- Botón de verificar E-mail -->
+
         <Button
-            android:id="@+id/button_verificar_email"
+            android:id="@+id/button_verificar_verificacion_email"
             android:layout_width="0dp"
             android:layout_height="52dp"
             android:layout_marginStart="40dp"
@@ -79,11 +77,11 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText_codigo_verificacion" />
+            app:layout_constraintTop_toBottomOf="@+id/editText_entrada_codigo_verificacion_email" />
 
-        <!-- Texto "Inicia Sesión" PEGADO al botón -->
+
         <TextView
-            android:id="@+id/textView_ya_tienes_cuenta_verificacion"
+            android:id="@+id/textView_enlace_iniciarsesion_verificacion_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -92,18 +90,18 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_verificar_email" />
+            app:layout_constraintTop_toBottomOf="@+id/button_verificar_verificacion_email" />
 
-        <!-- Icono de validación para código (PEQUEÑO) -->
+
         <ImageView
             android:id="@+id/icono_validacion_codigo"
             android:layout_width="14dp"
             android:layout_height="14dp"
             android:layout_marginEnd="20dp"
             android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/editText_codigo_verificacion"
-            app:layout_constraintEnd_toEndOf="@+id/editText_codigo_verificacion"
-            app:layout_constraintTop_toTopOf="@+id/editText_codigo_verificacion"
+            app:layout_constraintBottom_toBottomOf="@+id/editText_entrada_codigo_verificacion_email"
+            app:layout_constraintEnd_toEndOf="@+id/editText_entrada_codigo_verificacion_email"
+            app:layout_constraintTop_toTopOf="@+id/textView_enlace_iniciarsesion_verificacion_email"
             app:srcCompat="@drawable/icono_asterisk" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

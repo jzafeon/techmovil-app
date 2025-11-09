@@ -8,9 +8,9 @@
     android:background="@color/background_activities"
     tools:context=".activities.RecuperarContrasenaCelularActivity">
 
-    <!-- Título principal -->
+
     <TextView
-        android:id="@+id/textView_titulo_recuperar"
+        android:id="@+id/textView_titulo_recuperar_contrasena_celular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -23,9 +23,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Texto informativo -->
+
     <TextView
-        android:id="@+id/textView_info_recuperar"
+        android:id="@+id/textView_mensaje_informativo_recuperar_contrasena_cel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -38,42 +38,28 @@
         android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_titulo_recuperar" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_titulo_recuperar_contrasena_celular" />
 
-    <!-- Texto "Número de celular" -->
-    <TextView
-        android:id="@+id/textView_numero_celular"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="40dp"
-        android:text="Número de celular"
-        android:textColor="@color/text_color_black"
-        android:textSize="16sp"
-        android:fontFamily="sans-serif"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_info_recuperar" />
 
-    <!-- Campo de número de celular -->
     <EditText
-        android:id="@+id/editText_numero_celular"
+        android:id="@+id/editText_entrada_numero_celular_recuperar_contrasena_cel"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="60dp"
         android:background="@drawable/redondeado"
         android:hint="Número de celular"
-        android:textColorHint="@color/color_texto_entradas"
         android:inputType="phone"
         android:paddingStart="20dp"
+        android:textColorHint="@color/color_texto_entradas"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_numero_celular" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_informativo_recuperar_contrasena_cel" />
 
-    <!-- Botón Enviar código -->
     <Button
-        android:id="@+id/button_enviar_codigo"
+        android:id="@+id/button_enviar_codigo_recuperar_contrasena_cel"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="60dp"
@@ -87,26 +73,26 @@
         android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_numero_celular" />
+        app:layout_constraintTop_toBottomOf="@id/editText_entrada_numero_celular_recuperar_contrasena_cel" />
 
-    <!-- Texto de pregunta -->
+
     <TextView
-        android:id="@+id/textView_pregunta_acceso"
+        android:id="@+id/textView_enlace_soporte_tecnico_recup_contras_celular"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="60dp"
         android:gravity="center"
-        android:text="¿Ha tiene acceso al correo ir al celular?"
-        android:textColor="@color/text_color_black"
+        android:text="¿No tiene acceso al correo ni al celular \n Contactar soporte técnico"
+        android:textColor="@color/color_texto_enlaces"
         android:textSize="16sp"
         android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_enviar_codigo" />
+        app:layout_constraintTop_toBottomOf="@id/button_enviar_codigo_recuperar_contrasena_cel" />
 
-    <!-- Enlace "Contestar soporte técnico" -->
+
     <TextView
         android:id="@+id/textView_soporte_tecnico"
         android:layout_width="wrap_content"
@@ -118,6 +104,6 @@
         android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_pregunta_acceso" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_enlace_soporte_tecnico_recup_contras_celular" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

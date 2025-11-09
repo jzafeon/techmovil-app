@@ -30,12 +30,12 @@ class RegistroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
 
-        buttonContinuar = findViewById(R.id.button_continuar_egistro)
+        buttonContinuar = findViewById(R.id.button_continuar_registro)
         actualizarBotonContinuar(false)
         mostrarAsteriscosIniciales()
         configurarCampos()
 
-        findViewById<TextView>(R.id.textView_ya_tienes_cuenta_registro).setOnClickListener {
+        findViewById<TextView>(R.id.textView_iniciar_sesion_registro).setOnClickListener {
             startActivity(Intent(this, BienvenidaActivity::class.java))
             finish()
         }

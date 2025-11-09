@@ -14,9 +14,9 @@
         android:background="@color/background_activities"
         tools:context=".activities.IniciarSesionActivity">
 
-        <!-- Titulo -->
 
-        <!-- Campo de correo electrónico -->
+
+
         <TextView
             android:id="@+id/textView_titulo_iniciar_sesion"
             android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
             android:layout_height="48dp"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/redondeado"
             android:hint="Correo electrónico"
             android:textColorHint="@color/color_texto_entradas"
@@ -51,9 +51,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView_titulo_iniciar_sesion" />
 
-        <!-- Icono de validación para correo (ASTERISCO ROJO - SIN CAMBIOS) -->
+
         <ImageView
-            android:id="@+id/icono_validacion_correo"
+            android:id="@+id/icono_validacion_correo_iniciar_sesion"
             android:layout_width="14dp"
             android:layout_height="14dp"
             android:layout_marginEnd="20dp"
@@ -63,9 +63,9 @@
             app:layout_constraintTop_toTopOf="@+id/editText_correo_iniciar_sesion"
             app:srcCompat="@drawable/icono_asterisk" />
 
-        <!-- Mensaje azul para correo -->
+
         <TextView
-            android:id="@+id/textView_mensaje_correo"
+            android:id="@+id/textView_mensaje_correo_iniciar_sesion"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -79,14 +79,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_correo_iniciar_sesion" />
 
-        <!-- Campo de contraseña -->
+
         <EditText
             android:id="@+id/editText_contrasena_iniciar_sesion"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/redondeado"
             android:hint="Contraseña"
             android:textColorHint="@color/color_texto_entradas"
@@ -97,11 +97,11 @@
             android:maxLines="1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_correo" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_correo_iniciar_sesion" />
 
-        <!-- Icono del ojo para mostrar/ocultar contraseña -->
+
         <ImageView
-            android:id="@+id/icono_ojo_contrasena"
+            android:id="@+id/icono_ojo_contrasena_iniciar_sesion"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginEnd="15dp"
@@ -112,21 +112,21 @@
             app:layout_constraintTop_toTopOf="@+id/editText_contrasena_iniciar_sesion"
             app:srcCompat="@drawable/ojo_cerrado" />
 
-        <!-- Icono de validación para contraseña (CHECK AL LADO DEL OJO, ASTERISCO SIN CAMBIOS) -->
+
         <ImageView
-            android:id="@+id/icono_validacion_contrasena"
+            android:id="@+id/icono_validacion_contrasena_iniciar_sesion"
             android:layout_width="14dp"
             android:layout_height="14dp"
             android:layout_marginEnd="10dp"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="@+id/editText_contrasena_iniciar_sesion"
-            app:layout_constraintEnd_toStartOf="@+id/icono_ojo_contrasena"
+            app:layout_constraintEnd_toStartOf="@+id/icono_ojo_contrasena_iniciar_sesion"
             app:layout_constraintTop_toTopOf="@+id/editText_contrasena_iniciar_sesion"
             app:srcCompat="@drawable/icono_asterisk" />
 
-        <!-- Mensaje azul para contraseña -->
+
         <TextView
-            android:id="@+id/textView_mensaje_contrasena"
+            android:id="@+id/textView_mensaje_contrasena_iniciar_sesion"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -140,14 +140,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_contrasena_iniciar_sesion" />
 
-        <!-- Botón de inicio de sesión -->
+
         <Button
             android:id="@+id/button_ingresar_iniciar_sesion"
             android:layout_width="0dp"
             android:layout_height="52dp"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="30dp"
             android:backgroundTint="@color/color_fondo_botones"
             android:text="Ingresar"
             android:textColor="@color/color_texto_botones"
@@ -155,11 +155,11 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_contrasena" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_contrasena_iniciar_sesion" />
 
-        <!-- Enlace "¿Olvido su contraseña?" -->
+
         <TextView
-            android:id="@+id/textView_olvido_contrasena"
+            android:id="@+id/textView_olvido_contrasena_iniciar_sesion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -170,7 +170,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button_ingresar_iniciar_sesion" />
 
-        <!-- Enlace "¿No tiene cuenta? Registrarse" -->
+
         <TextView
             android:id="@+id/textView_registrarse_iniciar_sesion"
             android:layout_width="wrap_content"
@@ -182,7 +182,7 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_olvido_contrasena" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_olvido_contrasena_iniciar_sesion" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

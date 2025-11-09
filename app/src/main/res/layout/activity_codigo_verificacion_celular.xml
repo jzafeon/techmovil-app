@@ -63,6 +63,7 @@
         android:background="@drawable/redondeado"
         android:hint="Ingrese código celular"
         android:textColorHint="@color/color_texto_entradas"
+        android:textColor="@color/color_texto_ingreso"
         android:inputType="number"
         android:gravity="center"
         android:autofillHints="sans-serif"
@@ -90,6 +91,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_entrada_codigo_verificacion_celular"
         app:layout_constraintVertical_bias="0.088" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

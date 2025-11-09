@@ -14,7 +14,6 @@
         android:background="@color/background_activities"
         tools:context=".activities.CodigoVerificacionEmailActivity">
 
-
         <TextView
             android:id="@+id/textView_titulo_verificacion_email"
             android:layout_width="wrap_content"
@@ -41,8 +40,7 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_titulo_verificacion_email" />
-
+            app:layout_constraintTop_toBottomOf="@id/textView_titulo_verificacion_email" />
 
         <EditText
             android:id="@+id/editText_entrada_codigo_verificacion_email"
@@ -58,10 +56,10 @@
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:textColorHint="@color/color_texto_entradas"
+            android:textColor="@color/color_texto_ingreso"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_mensaje_informativo_verificacion_email" />
-
+            app:layout_constraintTop_toBottomOf="@id/textView_mensaje_informativo_verificacion_email" />
 
         <Button
             android:id="@+id/button_verificar_verificacion_email"
@@ -75,34 +73,12 @@
             android:textColor="@color/color_texto_botones"
             android:textSize="18sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText_entrada_codigo_verificacion_email" />
-
-
-        <TextView
-            android:id="@+id/textView_enlace_iniciarsesion_verificacion_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="¿tienes cuenta? Inicia Sesión"
-            android:textColor="@color/color_texto_enlaces"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_verificar_verificacion_email" />
-
-
-        <ImageView
-            android:id="@+id/icono_validacion_codigo"
-            android:layout_width="14dp"
-            android:layout_height="14dp"
-            android:layout_marginEnd="20dp"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/editText_entrada_codigo_verificacion_email"
-            app:layout_constraintEnd_toEndOf="@+id/editText_entrada_codigo_verificacion_email"
-            app:layout_constraintTop_toTopOf="@+id/textView_enlace_iniciarsesion_verificacion_email"
-            app:srcCompat="@drawable/icono_asterisk" />
+            app:layout_constraintTop_toBottomOf="@id/editText_entrada_codigo_verificacion_email"
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

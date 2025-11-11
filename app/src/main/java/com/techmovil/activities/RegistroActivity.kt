@@ -12,11 +12,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.techmovil.R
+import com.techmovil.data.DatabaseHelper
+import android.widget.Toast
 
 class RegistroActivity : AppCompatActivity() {
 
     private lateinit var buttonContinuar: Button
-        private val dominiosPermitidos = listOf(
+    private lateinit var databaseHelper: DatabaseHelper // Declarar base de datos
+    private val dominiosPermitidos = listOf(
         "gmail.com",
         "outlook.com", "outlook.es",
         "hotmail.com", "hotmail.es",
@@ -30,6 +33,9 @@ class RegistroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
 
+        databaseHelper = DatabaseHelper(this) // Inicializar base de datos
+
+
         buttonContinuar = findViewById(R.id.button_continuar_registro)
         actualizarBotonContinuar(false)
         mostrarAsteriscosIniciales()
@@ -42,9 +48,12 @@ class RegistroActivity : AppCompatActivity() {
 
         buttonContinuar.setOnClickListener {
             if (validarTodosLosCampos()) {
-                val intent = Intent(this, CodigoVerificacionEmailActivity::class.java)
-                startActivity(intent)
-                finish()
+                // Registrar usuario en base de datos
+                if (registrarUsuarioEnBD()) {
+                    val intent = Intent(this, CodigoVerificacionEmailActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
             }
         }
     }
@@ -158,7 +167,7 @@ class RegistroActivity : AppCompatActivity() {
         val icono = findViewById<ImageView>(R.id.icono_validacion_cedula)
         val mensaje = findViewById<TextView>(R.id.textView_mensaje_cedula)
 
-        // LÍMITE DE 10 DÍGITOS PARA CÉDULA
+        // LÍMITE DE 10 DÍGITOS PARA CEDULA
         editText.filters = arrayOf(android.text.InputFilter.LengthFilter(10))
 
         editText.addTextChangedListener(createTextWatcher(icono, editText, mensaje) { texto ->
@@ -176,7 +185,6 @@ class RegistroActivity : AppCompatActivity() {
         val icono = findViewById<ImageView>(R.id.icono_validacion_email)
         val mensaje = findViewById<TextView>(R.id.textView_mensaje_email)
 
-        // MANTENER LA CAPACIDAD DE EDITAR DESDE CUALQUIER POSICIÓN
         editText.setOnTouchListener { v, event ->
             if (event.action == MotionEvent.ACTION_UP) {
                 (v as EditText).getOffsetForPosition(event.x, event.y).takeIf { it != -1 }?.let {
@@ -190,7 +198,7 @@ class RegistroActivity : AppCompatActivity() {
             if (hasFocus) v.post { (v as EditText).setSelection(v.text.length) }
         }
 
-        // VARIABLE PARA CONTROLAR SI EL EMAIL ESTÁ COMPLETO
+
         var isEmailComplete = false
 
         editText.addTextChangedListener(object : TextWatcher {
@@ -199,7 +207,7 @@ class RegistroActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {
                 val textoLimpio = s.toString().replace(" ", "")
 
-                // VERIFICAR SI EL EMAIL ESTÁ COMPLETO
+                // Verificar si el email está completo
                 isEmailComplete = validarEmailEstricto(textoLimpio)
 
                 val error = when {
@@ -222,18 +230,18 @@ class RegistroActivity : AppCompatActivity() {
             }
         })
 
-        // FILTRO MEJORADO: ELIMINA ESPACIOS Y BLOQUEA ESCRITURA DESPUÉS DEL DOMINIO COMPLETO
+        // LÍMITE DE 35 CARACTERES PARA EMAIL
         editText.filters = arrayOf(
             android.text.InputFilter { source, start, end, dest, dstart, dend ->
-                // Si el email está completo y el usuario intenta agregar al final, bloquear
+                // Eliminar espacios en blanco al final del email
                 if (isEmailComplete && dstart >= dest.length) {
                     return@InputFilter ""
                 }
-                // Eliminar espacios
+                // Eliminar espacios en blanco
                 if (source.contains(" ")) {
                     return@InputFilter ""
                 }
-                // Permitir edición normal
+
                 null
             }
         )
@@ -244,7 +252,7 @@ class RegistroActivity : AppCompatActivity() {
         val icono = findViewById<ImageView>(R.id.icono_validacion_telefono)
         val mensaje = findViewById<TextView>(R.id.textView_mensaje_telefono)
 
-        // LÍMITE DE 13 CARACTERES PARA TELÉFONO (+57 + 10 dígitos)
+        // LÍMITE DE 13 DÍGITOS PARA TELÉFONO
         editText.filters = arrayOf(android.text.InputFilter.LengthFilter(13))
 
         editText.setText("+57")
@@ -329,4 +337,45 @@ class RegistroActivity : AppCompatActivity() {
         buttonContinuar.isEnabled = habilitar
         buttonContinuar.alpha = if (habilitar) 1.0f else 0.5f
     }
+
+    // Registrar usuario en base de datos
+    private fun registrarUsuarioEnBD(): Boolean {
+        try {
+            val nombres = findViewById<EditText>(R.id.editText_nombres_registro).text.toString().trim()
+            val apellidos = findViewById<EditText>(R.id.editText_apellidos_registro).text.toString().trim()
+            val cedula = findViewById<EditText>(R.id.editText_cedula_registro).text.toString().trim()
+            val email = findViewById<EditText>(R.id.editText_email_registro).text.toString().trim()
+            val telefono = findViewById<EditText>(R.id.editText_telefono_registro).text.toString().trim()
+
+            if (databaseHelper.existeEmail(email)) {
+                Toast.makeText(this, "El email ya está registrado", Toast.LENGTH_SHORT).show()
+                return false
+            }
+
+            val idUsuario = "user_${System.currentTimeMillis()}"
+            val contrasenaTemporal = "temp123"
+
+            val resultado = databaseHelper.insertarUsuario(
+                id = idUsuario,
+                nombres = nombres,
+                apellidos = apellidos,
+                cedula = cedula,
+                email = email,
+                telefono = telefono,
+                contrasena = contrasenaTemporal
+            )
+
+            if (resultado) {
+                Toast.makeText(this, "Usuario registrado exitosamente", Toast.LENGTH_SHORT).show()
+            }
+
+            return resultado
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Toast.makeText(this, "Error al registrar usuario", Toast.LENGTH_SHORT).show()
+            return false
+        }
+    }
+
 }

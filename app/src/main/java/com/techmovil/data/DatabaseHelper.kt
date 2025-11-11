@@ -11,6 +11,7 @@ class DatabaseHelper (context: Context): SQLiteOpenHelper(context, "db.techmovil
         private const val DATABASE_VERSION = 1
     }
 
+
     // Método para crear la base de datos
     override fun onCreate(db: SQLiteDatabase) {
         val sql = """

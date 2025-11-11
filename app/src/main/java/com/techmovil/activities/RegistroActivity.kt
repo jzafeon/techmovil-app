@@ -124,6 +124,7 @@ class RegistroActivity : AppCompatActivity() {
                         return
                     }
 
+
                     val textoCapitalizado = capitalizarTexto(texto)
                     if (texto != textoCapitalizado) s?.replace(0, texto.length, textoCapitalizado)
 

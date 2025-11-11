@@ -12,6 +12,7 @@ class CelularVerificadoActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_celular_verificado)
 
+        // redireccionamiento
         val intent = Intent(this, CrearContrasenaRegistroActivity::class.java)
         startActivity(intent)
         finish()

@@ -11,6 +11,7 @@ import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.techmovil.R
+import com.techmovil.data.DatabaseHelper
 
 class CrearContrasenaRegistroActivity : AppCompatActivity() {
 
@@ -21,8 +22,9 @@ class CrearContrasenaRegistroActivity : AppCompatActivity() {
     private lateinit var iconoValidacionCrearContrasena: ImageView
     private lateinit var iconoValidacionConfirmarContrasena: ImageView
     private lateinit var buttonFinalizarRegistro: Button
+    private lateinit var databaseHelper: DatabaseHelper
 
-    private val limiteContrasena = 20
+    private val limiteContrasena = 15
     private var isPasswordVisibleCrear = false
     private var isPasswordVisibleConfirmar = false
 
@@ -31,12 +33,16 @@ class CrearContrasenaRegistroActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_crear_contrasena_registro)
 
+        databaseHelper = DatabaseHelper(this)
+
         initViews()
         setupValidations()
-
+        // Botón finalizar registro
         buttonFinalizarRegistro.setOnClickListener {
             if (validarFormularioCompleto()) {
-                startActivity(Intent(this, BienvenidaActivity::class.java))
+                val contrasena = editTextCrearContrasena.text.toString()
+                databaseHelper.crearContrasena(contrasena)
+                startActivity(Intent(this, RegistroCompletadoActivity::class.java))
                 finish()
             }
         }
@@ -133,7 +139,7 @@ class CrearContrasenaRegistroActivity : AppCompatActivity() {
                 contrasena.matches(Regex(".*[A-Z].*")) &&
                 contrasena.matches(Regex(".*[a-z].*")) &&
                 contrasena.matches(Regex(".*[0-9].*")) &&
-                contrasena.matches(Regex(".*[!@#\$%^&*(),.?\":{}|<>].*"))
+                contrasena.matches(Regex(".*[!@#\$%^&*(),.?\":{}|<>].*+-"))
 
         actualizarEstadoContrasena(iconoValidacionCrearContrasena, editTextCrearContrasena.text.toString(), esValido)
     }
@@ -161,7 +167,7 @@ class CrearContrasenaRegistroActivity : AppCompatActivity() {
                 contrasena.matches(Regex(".*[A-Z].*")) &&
                 contrasena.matches(Regex(".*[a-z].*")) &&
                 contrasena.matches(Regex(".*[0-9].*")) &&
-                contrasena.matches(Regex(".*[!@#\$%^&*(),.?\":{}|<>].*"))
+                contrasena.matches(Regex(".*[!@#\$%^&*(),.?\":{}|<>].*+-"))
     }
 
     private fun actualizarBotonFinalizar() {

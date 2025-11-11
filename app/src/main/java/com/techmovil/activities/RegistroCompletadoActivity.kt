@@ -1,10 +1,9 @@
 package com.techmovil.activities
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.techmovil.R
 
 class RegistroCompletadoActivity : AppCompatActivity() {
@@ -13,5 +12,11 @@ class RegistroCompletadoActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_registro_completado)
 
+        // redireccionamiento
+        findViewById<android.widget.Button>(R.id.button_continuar_registro_completado).setOnClickListener {
+            val intent = Intent(this, BienvenidaActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

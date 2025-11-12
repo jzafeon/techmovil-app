@@ -96,7 +96,7 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, "db.techmovil"
             put("cedula", cedula)
             put("email", email)
             put("telefono", telefono)
-            put("contrasena", "") // CONTRASEÑA VACÍA INICIAL
+            put("contrasena", "")
             put("fecha_registro", System.currentTimeMillis())
         }
         val resultado = db.insert("usuarios", null, values)
@@ -109,7 +109,7 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, "db.techmovil"
         val db = writableDatabase
         val values = ContentValues().apply {
             put("contrasena", contrasena)
-        }// CONTRASEÑA VACÍA INICIAL
+        }
         val resultado = db.update("usuarios", values, "contrasena = ?", arrayOf(""))
         return resultado > 0
     }

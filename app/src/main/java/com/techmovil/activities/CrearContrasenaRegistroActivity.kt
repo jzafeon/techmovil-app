@@ -112,10 +112,8 @@ class CrearContrasenaRegistroActivity : AppCompatActivity() {
             actualizarVisibilidadOjos()
             actualizarBotonFinalizar()
         }
-
         actualizarBotonFinalizar()
     }
-
     private fun setupTextWatcher(editText: EditText, onTextChanged: (String) -> Unit) {
         editText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}

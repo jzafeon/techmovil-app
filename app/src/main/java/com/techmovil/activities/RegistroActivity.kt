@@ -14,9 +14,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.techmovil.R
 import com.techmovil.data.DatabaseHelper
-
 class RegistroActivity : AppCompatActivity() {
-
     private lateinit var buttonContinuar: Button
     private lateinit var databaseHelper: DatabaseHelper
     private val dominiosPermitidos = listOf(

@@ -59,7 +59,7 @@ class IniciarSesionActivity : AppCompatActivity() {
         initViews()
         setupValidations()
 
-        // Redireccionamiento a RegistroActivity
+        // Botón de registro
         val textViewRegistrarse = findViewById<TextView>(R.id.textView_registrarse_iniciar_sesion)
         textViewRegistrarse.setOnClickListener {
             val intent = Intent(this, RegistroActivity::class.java)
@@ -81,14 +81,11 @@ class IniciarSesionActivity : AppCompatActivity() {
 
         // Mostrar asteriscos iniciales
         mostrarAsteriscosIniciales()
-
-        // Configurar límites de caracteres y filtros
+        // Configurar filtros
         configurarFiltros()
-
-        // Configurar el clic del icono del ojo
+        // Configurar ojo de contraseña
         configurarOjoContrasena()
-
-        // Configurar comportamiento del teclado
+        // Configurar teclado
         configurarTeclado()
     }
 
@@ -216,7 +213,7 @@ class IniciarSesionActivity : AppCompatActivity() {
             if (validarFormularioCompleto()) {
                 val correo = editTextCorreo.text.toString().replace(" ", "")
                 val contrasena = editTextContrasena.text.toString()
-                // Ejemplo: iniciarSesion(correo, contrasena)
+                // Iniciar sesión aquí
             }
         }
 
@@ -240,6 +237,7 @@ class IniciarSesionActivity : AppCompatActivity() {
             textViewMensajeCorreo.visibility = TextView.GONE
         }
     }
+    // Validar contraseña
     private fun validarContrasena(contrasena: String) {
         val error = when {
             contrasena.isEmpty() -> null
@@ -260,26 +258,31 @@ class IniciarSesionActivity : AppCompatActivity() {
             textViewMensajeContrasena.visibility = TextView.GONE
         }
     }
+    // Actualizar estado del correo
     private fun actualizarEstadoCorreo(esValido: Boolean) {
         val texto = editTextCorreo.text.toString()
         iconoValidacionCorreo.setImageResource(if (esValido) R.drawable.icono_check else R.drawable.icono_asterisk)
         iconoValidacionCorreo.visibility = if (texto.isEmpty() || esValido) ImageView.VISIBLE else ImageView.INVISIBLE
     }
+    // Actualizar estado de la contraseña
     private fun actualizarEstadoContrasena(esValido: Boolean) {
         val texto = editTextContrasena.text.toString()
         iconoValidacionContrasena.setImageResource(if (esValido) R.drawable.icono_check else R.drawable.icono_asterisk)
         iconoValidacionContrasena.visibility = if (texto.isEmpty() || esValido) ImageView.VISIBLE else ImageView.INVISIBLE
     }
+    // Validar email estricto
     private fun validarEmailEstricto(email: String): Boolean {
         return email.count { it == '@' } == 1 &&
                 android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches() &&
                 email.substringAfterLast('@').lowercase() in dominiosPermitidos
     }
+    // Validar formulario completo
     private fun validarFormularioCompleto(): Boolean {
         val correoValido = validarEmailEstricto(editTextCorreo.text.toString().replace(" ", ""))
         val contrasenaValida = validarContrasenaSilenciosa(editTextContrasena.text.toString())
         return correoValido && contrasenaValida
     }
+    // Validar contraseña
     private fun validarContrasenaSilenciosa(contrasena: String): Boolean {
         return contrasena.isNotEmpty() &&
                 contrasena.length >= 8 &&
@@ -289,6 +292,7 @@ class IniciarSesionActivity : AppCompatActivity() {
                 contrasena.matches(Regex(".*[0-9].*")) &&
                 contrasena.matches(Regex(".*[!@#\$%^&*(),.?\":{}|<>].*"))
     }
+    // Actualizar botón de ingresar
     private fun actualizarBotonIngresar() {
         val formularioValido = validarFormularioCompleto()
         buttonIngresar.isEnabled = formularioValido

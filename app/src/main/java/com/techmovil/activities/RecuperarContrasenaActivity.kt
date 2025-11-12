@@ -11,5 +11,6 @@ class RecuperarContrasenaActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_recuperar_contrasena)
 
+
     }
 }

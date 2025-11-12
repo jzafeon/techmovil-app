@@ -131,6 +131,7 @@ class CrearContrasenaRegistroActivity : AppCompatActivity() {
             }
         })
     }
+
     // Validar contraseña
     private fun validarCrearContrasena(contrasena: String) {
         val esValido = contrasena.isNotEmpty() &&

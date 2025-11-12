@@ -17,6 +17,7 @@ class RegistroCompletadoActivity : AppCompatActivity() {
             val intent = Intent(this, BienvenidaActivity::class.java)
             startActivity(intent)
             finish()
+
         }
     }
 }

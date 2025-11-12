@@ -12,7 +12,7 @@ class RegistroCompletadoActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_registro_completado)
 
-        // redireccionamiento
+        // redireccionamiento a la pantalla de bienvenida
         findViewById<android.widget.Button>(R.id.button_continuar_registro_completado).setOnClickListener {
             val intent = Intent(this, BienvenidaActivity::class.java)
             startActivity(intent)

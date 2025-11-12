@@ -350,7 +350,6 @@ class RegistroActivity : AppCompatActivity() {
                 email = email,
                 telefono = telefono
             )
-
             return resultado
 
         } catch (e: Exception) {

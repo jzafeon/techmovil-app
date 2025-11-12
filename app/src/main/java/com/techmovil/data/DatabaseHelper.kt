@@ -60,7 +60,6 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, "db.techmovil"
 
         return resultados
     }
-
     // Método para obtener mensajes de error de campos duplicados
     fun obtenerMensajesErrorDuplicados(cedula: String, email: String, telefono: String): List<String> {
         val errores = mutableListOf<String>()

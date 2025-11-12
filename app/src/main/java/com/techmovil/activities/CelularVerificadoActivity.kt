@@ -12,7 +12,7 @@ class CelularVerificadoActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_celular_verificado)
 
-        // redireccionamiento
+        // redireccionamiento a la pantalla de crear contraseña
         val intent = Intent(this, CrearContrasenaRegistroActivity::class.java)
         startActivity(intent)
         finish()
